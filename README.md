@@ -10,7 +10,7 @@ Our data type is VOC type. So we have `.xml` files for label of images and `.png
 * Train  
 -`train_shoulder.py`: Training a SSD net on train set and saving its weights every 1000 epochs. Weights files all be saved in 'weights_shoulder/'   
   
-  -`train_generate_shoulder_box.py`: Testing all train datasets by SSD net that be trained by `train_shoulder.py`. All predict results of shoulder label have been saved in 'shoulder_csv'. This `.csv` file will be used in `train_hand.py` and `eval_train_hand.py` for image crop.
+  -`train_generate_shoulder_box.py`: Testing all train datasets by SSD net that be trained by `train_shoulder.py`. All predict results of shoulder label have been saved in 'shoulder_csv'. This `.csv` file will be used in `train_hand.py` , `test_trainset.py` and `eval_train_hand.py` for image crop.
   
   -`train_hand.py`:Using 'shoulder_csv/train_shoulder.csv' to cut image. Training these images after cutting by another SSD net and saving its weights every 1000 epochs. Weights files all be saved in 'weights_hand/'. 
 
@@ -21,4 +21,12 @@ Our data type is VOC type. So we have `.xml` files for label of images and `.png
   
   -`test_testset.py`:Using 'shoulder_csv/test_shoulder.csv' and weights file from `train_hand.py` to test test set. Result is saved in 'test/testset'.  
   
-* Evaluation 
+* Evaluation  
+-`eval_train_hand.py`:Evaluating the performance of SSD net that be trained by `train_hand.py` on train set.  
+
+  -`eval_train_shoulder.py`:Evaluating the performance of SSD net that be trained by `train_shoulder.py` on train set.  
+ 
+  -`eval_test_hand.py`:Evaluating the performance of SSD net that be trained by `train_hand.py` on test set.  
+
+  -`eval_test_shoulder.py`:Evaluating the performance of SSD net that be trained by `train_shoulder.py` on test set.
+
