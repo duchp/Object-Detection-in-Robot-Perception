@@ -32,7 +32,7 @@ A simple SSD model can be used as a base-model. We can see its results and then 
 
 ## ssd-cbam
 'Convolutional Block Attention Module (CBAM),a simple yet effective attention module for feed-forward convolutional neural networks.' Because CBAM takes the attention of space and channel into consideration, so it is added to the structure of SSD.The specific structure is shown in the figure below:
- ![image](https://github.com/duchp/Object-Detection-in-Robot-Perception/ssd-cbam.jpg)
+ ![image](https://github.com/duchp/Object-Detection-in-Robot-Perception/blob/master/ssd-cbam.PNG)
 
 * Train 
   
